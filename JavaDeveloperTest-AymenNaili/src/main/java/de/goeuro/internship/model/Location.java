@@ -18,7 +18,7 @@ public class Location {
 	private int location_id;
 	private boolean inEurope;
 	private String countryCode;
-	private String coreCountry;
+	private boolean coreCountry;
 	private String distance;
 
 	public Location() {
@@ -28,7 +28,7 @@ public class Location {
 	public Location(int _id, String key, String name, String fullName,
 			String iata_airport_code, String type, String country,
 			GeoPosition geo_position, int location_id, boolean inEurope,
-			String countryCode, String coreCountry, String distance) {
+			String countryCode, boolean coreCountry, String distance) {
 		super();
 		this._id = _id;
 		this.key = key;
@@ -133,11 +133,11 @@ public class Location {
 		this.countryCode = countryCode;
 	}
 
-	public String getCoreCountry() {
+	public boolean getCoreCountry() {
 		return coreCountry;
 	}
 
-	public void setCoreCountry(String coreCountry) {
+	public void setCoreCountry(boolean coreCountry) {
 		this.coreCountry = coreCountry;
 	}
 
